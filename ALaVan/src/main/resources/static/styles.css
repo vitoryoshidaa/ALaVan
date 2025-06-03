@@ -1,0 +1,360 @@
+:root {
+    --primary: #000000;
+    --secondary: #1a1a1a;
+    --accent: #2b2b2b;
+    --light: #ffffff;
+    --text-light: #f1f1f1;
+    --text-dark: #000000;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light);
+    color: var(--text-dark);
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--text-dark) !important;
+}
+
+.leaf-icon {
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+.leaf-icon img {
+    background: transparent !important;
+    border-radius: 0 !important;
+    display: block;
+    max-height: 60px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-dark) !important;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Section */
+.hero-section {
+    background: url("images/modelos.png");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* escurece a imagem para melhorar o contraste */
+    z-index: -1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+.about-section {
+    background: url("images/outrasModelos.png") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.cta-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 1);
+    z-index: 1;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-buttons .btn {
+    padding: 15px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* Remove o gradiente da esquerda e unifica com o da direita */
+.btn-primary,
+.btn-outline-light {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* Hover igual para os dois botões */
+.btn-primary:hover,
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: white;
+}
+
+/* Products Section */
+.products-section {
+    background: #000000 ;
+    background-size: cover;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.products-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* escurece o fundo para melhor contraste */
+    z-index: -1;
+}
+
+.products-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Feature Icons */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: black; /* fundo do círculo preto */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: white; /* cor do ícone branco */
+}
+
+.feature-icon i {
+    color: white; /* garante que todos os ícones fiquem brancos */
+}
+
+/* Product Carousel */
+.carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-title {
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #555;
+}
+
+.card-text.fw-bold {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: black;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: #333;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+}
+
+/* Quality Stats */
+.quality-stat {
+    padding: 30px 20px;
+}
+.impact-section {
+    background: #000; /* fundo preto */
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0); /* remove o overlay esmaecido */
+    z-index: 1;
+}
+
+.impact-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.impact-stat {
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a !important;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #555 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .card {
+        margin-bottom: 30px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-item.active .card {
+    animation: fadeInUp 0.6s ease-out;
+}
